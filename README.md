@@ -4,9 +4,11 @@
 
 Mais informações na documentação oficial do Numpy Financial [aqui](https://numpy.org/numpy-financial/dev/).
 
-![numpy-financial.png](attachment:numpy-financial.png)
+![image](resources/numpy-financial.png)
 
-### Pré-Requisitos(desconsiderar se estiver usando o [Google Colab](https://colab.research.google.com/))
+### Pré-Requisitos
+
+(Desconsiderar se estiver usando o [Google Colab](https://colab.research.google.com/))
 
 Para instalar o pacote numpy-financial, basta executar o comando:
 
