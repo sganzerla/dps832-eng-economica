@@ -28,7 +28,7 @@ Abaixo link para 4 recursos disponíveis para uso em duas categorias diferentes.
 
 Métodos de conversão de valores ao longo do tempo para formatos diferentes de fluxo de caixa.
 
-* 1-1 [Conversões e Equivalências](fluxo.ipynb)
+* [1-1 Conversões e Equivalências](fluxo.ipynb)
 
 Exemplo de uso:
 
@@ -47,9 +47,9 @@ Saída:
 
 Métodos para realizar análise de investimentos de três formas diferentes.
 
-* 2-1 [TIR - Taxa Interna de Retorno](tir.ipynb)
-* 2-2 [VPL - Valor Presente Líquido](vpl.ipynb)
-* 2-3 [VAUE/CAUE - Valor (ou Custo) Anual Uniforme Equivalente](vaue.ipynb)
+* [2-1 TIR - Taxa Interna de Retorno](tir.ipynb)
+* [2-2 VPL - Valor Presente Líquido](vpl.ipynb)
+* [2-3 VAUE/CAUE - Valor (ou Custo) Anual Uniforme Equivalente](vaue.ipynb)
   
 Exemplo de uso usando TIR:
 
