@@ -16,7 +16,7 @@ Para instalar o pacote numpy-financial, basta executar o comando:
 
 ou, se você estiver usando o Anaconda, basta executar:
 
-    conda install numpy-financial
+    conda install -c conda-forge numpy-financial
 
 (Código testado e rodando com o Python 3.9.7, via Anaconda)
 
