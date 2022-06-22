@@ -1,16 +1,16 @@
 # DPS832-eng-economica
 
-## Análise de Investimentos com Numpy Financial
+Repositório de estudos de Engenharia Econômica utilizando Jupyter Notebook
 
-Mais informações na documentação oficial do Numpy Financial [aqui](https://numpy.org/numpy-financial/dev/).
+## Como Usar
 
-![image](resources/numpy-financial.png)
+Baixando o repositório completo e executando os arquivos `.ipynb` através do `Jupyter Notebook` instalado e configurado na própria máquina ou importando-os para o [Google Colab](https://colab.research.google.com/)) e executando-os na nuvem sem realizar nenhuma configuração adicional.
 
-### Pré-Requisitos
+## Pré-Requisitos
 
-(Desconsiderar se estiver usando o [Google Colab](https://colab.research.google.com/))
+Somente siga esses passos se for executar locamente, desconsiderar se estiver usando o [Google Colab](https://colab.research.google.com/)).
 
-Para instalar o pacote numpy-financial, basta executar o comando:
+Para instalar o pacote numpy-financial, que é utilizado nos métodos de Análise de Investimentos, basta executar o comando:
 
     pip install numpy-financial  (ou pip3)
 
@@ -20,13 +20,50 @@ ou, se você estiver usando o Anaconda, basta executar:
 
 (Código testado e rodando com o Python 3.9.7, via Anaconda)
 
-## Fluxo de Caixa
+## Ferramentas Disponíveis
+
+Abaixo link para 4 recursos disponíveis para uso.
+
+### Fluxo de Caixa
+
+Métodos de conversão de valores ao longo do tempo para formatos diferentes de fluxo de caixa.
 
 * [Conversões e Equivalências](fluxo.ipynb)
 
-## Métodos Determinísticos de Ánalise de Investimentos
+Exemplo de uso:
+
+    valor_presente: float = 1000
+    taxa: float = 0.08
+    periodo: int = 12
+
+    v_futuro: float = obter_f_com_p(valor_presente, taxa, periodo)
+    print("Valor Futuro:", round(v_futuro, 2))
+
+Resposta:
+
+    Valor Futuro: 2518.17
+
+### Ánalise de Investimentos
+
+Métodos para realizar análise de investimentos de três formas diferentes.
 
 * [VPL - Valor Presente Líquido](vpl.ipynb)
 * [VAUE/CAUE - Valor (ou Custo) Anual Uniforme Equivalente](vaue.ipynb)
 * [TIR - Taxa Interna de Retorno](tir.ipynb)
   
+  Exemplo de uso usando TIR:
+
+    investimento1: Investimento = Investimento(
+        taxa=0.0, fluxo_caixa=[-150, 73, 73, 73])
+
+    investimento2: Investimento = Investimento(
+        taxa=0.0, fluxo_caixa=[-130, 52, 52, 52])
+
+    comparar_invest_via_tir(investimento1, investimento2)
+
+Saída:
+
+    Comparação de investimentos considerando TIR.
+    Investimento 1:  21.6
+    Investimento 2:  9.7
+    Melhor investimento, considerando maior valor TIR é:  21.6%
