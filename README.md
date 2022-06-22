@@ -22,13 +22,13 @@ ou, se você estiver usando o Anaconda, basta executar:
 
 ## Ferramentas Disponíveis
 
-Abaixo link para 4 recursos disponíveis para uso.
+Abaixo link para 4 recursos disponíveis para uso em duas categorias diferentes.
 
-### Fluxo de Caixa
+### 1 - Fluxo de Caixa
 
 Métodos de conversão de valores ao longo do tempo para formatos diferentes de fluxo de caixa.
 
-* [Conversões e Equivalências](fluxo.ipynb)
+* 1-1 [Conversões e Equivalências](fluxo.ipynb)
 
 Exemplo de uso:
 
@@ -39,19 +39,19 @@ Exemplo de uso:
     v_futuro: float = obter_f_com_p(valor_presente, taxa, periodo)
     print("Valor Futuro:", round(v_futuro, 2))
 
-Resposta:
+Saída:
 
     Valor Futuro: 2518.17
 
-### Ánalise de Investimentos
+### 2 - Ánalise de Investimentos
 
 Métodos para realizar análise de investimentos de três formas diferentes.
 
-* [VPL - Valor Presente Líquido](vpl.ipynb)
-* [VAUE/CAUE - Valor (ou Custo) Anual Uniforme Equivalente](vaue.ipynb)
-* [TIR - Taxa Interna de Retorno](tir.ipynb)
+* 2-1 [TIR - Taxa Interna de Retorno](tir.ipynb)
+* 2-2 [VPL - Valor Presente Líquido](vpl.ipynb)
+* 2-3 [VAUE/CAUE - Valor (ou Custo) Anual Uniforme Equivalente](vaue.ipynb)
   
-  Exemplo de uso usando TIR:
+Exemplo de uso usando TIR:
 
     investimento1: Investimento = Investimento(
         taxa=0.0, fluxo_caixa=[-150, 73, 73, 73])
