@@ -2,6 +2,15 @@
 
 Repositório de estudos de Engenharia Econômica utilizando Jupyter Notebook
 
+## Ferramentas
+
+* Fluxo de Caixa:
+  * [Fluxo DeConversões e Equivalências](fluxo.ipynb)
+* Análise de Investimento:
+  * [TIR - Taxa Interna de Retorno](tir.ipynb)
+  * [VPL - Valor Presente Líquido](vpl.ipynb)
+  * [VAUE - Valor Anual Uniforme Equivalente](vaue.ipynb)
+
 ## Como Usar
 
 Baixando o repositório completo e executando os arquivos `.ipynb` através do `Jupyter Notebook` instalado e configurado na própria máquina ou importando-os para o [Google Colab](https://colab.research.google.com/)) e executando-os na nuvem sem realizar nenhuma configuração adicional.
@@ -20,15 +29,11 @@ ou, se você estiver usando o Anaconda, basta executar:
 
 (Código testado e rodando com o Python 3.9.7, via Anaconda)
 
-## Ferramentas Disponíveis
+## Exemplo de Uso
 
-Abaixo link para 4 recursos disponíveis para uso em duas categorias diferentes.
-
-### 1 - Fluxo de Caixa
+### Fluxo de Caixa
 
 Métodos de conversão de valores ao longo do tempo para formatos diferentes de fluxo de caixa.
-
-* [1-1 Conversões e Equivalências](fluxo.ipynb)
 
 Exemplo de uso:
 
@@ -43,23 +48,19 @@ Saída:
 
     Valor Futuro: 2518.17
 
-### 2 - Ánalise de Investimentos
+### Ánalise de Investimentos
 
 Métodos para realizar análise de investimentos de três formas diferentes.
-
-* [2-1 TIR - Taxa Interna de Retorno](tir.ipynb)
-* [2-2 VPL - Valor Presente Líquido](vpl.ipynb)
-* [2-3 VAUE/CAUE - Valor (ou Custo) Anual Uniforme Equivalente](vaue.ipynb)
   
-Exemplo de uso usando TIR:
+#### Exemplo de uso com TIR
 
-    investimento1: Investimento = Investimento(
+    inv_a = Investimento(
         taxa=0.0, fluxo_caixa=[-150, 73, 73, 73])
 
-    investimento2: Investimento = Investimento(
+    inve_b = Investimento(
         taxa=0.0, fluxo_caixa=[-130, 52, 52, 52])
 
-    comparar_invest_via_tir(investimento1, investimento2)
+    comparar_invest_via_tir(inv_a, inve_b)
 
 Saída:
 
@@ -67,3 +68,53 @@ Saída:
     Investimento 1:  21.6
     Investimento 2:  9.7
     Melhor investimento, considerando maior valor TIR é:  21.6%
+
+#### Exemplo de uso com VPL
+
+    inv_a = Investimento(
+        taxa=0.15,
+        fluxo_caixa=[
+            -103,
+            30, 35, 32, 28, 37
+        ])
+
+    inv_b = Investimento(
+        taxa=0.18,
+        fluxo_caixa=[
+            -103,
+            30, 35, 32, 28, 37
+        ])
+
+    comparar_invest_via_vpl(inv_a, inv_b)
+
+Saída:
+
+    Comparação de investimentos com mesmo período de tempo (5) considerando VPL.
+    Investimento 1:  5.0
+    Investimento 2:  -2.35
+    Melhor investimento, considerando maior valor de VPL é:  5.0
+
+#### Exemplo de uso com VAUE
+
+    inv_a = Investimento(
+        taxa=0.3,
+        fluxo_caixa=[
+            -14_000,
+            5_000, 5_000, 5_000, 5_000, 5_000, 5_000, 5_000
+        ])
+
+    inv_b = Investimento(
+        taxa=0.3,
+        fluxo_caixa=[
+            -18_000,
+            6_500, 6_500, 6_500, 6_500, 6_500, 6_500, 6_500
+        ])
+
+    comparar_invest_via_vaue(inv_a, inv_b)
+
+Saída:
+
+    Comparação de investimentos considerando VAUE.
+    Investimento 1:  3.77%
+    Investimento 2:  76.27%
+    Melhor investimento, considerando maior valor VAUE é:  76.27%
