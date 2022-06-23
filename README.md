@@ -13,11 +13,11 @@ Repositório de estudos de Engenharia Econômica utilizando Jupyter Notebook
 
 ## Como Usar
 
-Baixando o repositório completo e executando os arquivos `.ipynb` através do `Jupyter Notebook` instalado e configurado na própria máquina ou importando-os para o [Google Colab](https://colab.research.google.com/)) e executando-os na nuvem sem realizar nenhuma configuração adicional.
+Baixando o repositório completo e executando os arquivos `.ipynb` através do `Jupyter Notebook` instalado e configurado na própria máquina ou importando-os para o [Google Colab](https://colab.research.google.com/) e executando-os na nuvem sem realizar nenhuma configuração adicional.
 
 ## Pré-Requisitos
 
-Somente siga esses passos se for executar locamente, desconsiderar se estiver usando o [Google Colab](https://colab.research.google.com/)).
+Somente siga esses passos se for executar localmente, desconsiderar se estiver usando o [Google Colab](https://colab.research.google.com/)).
 
 Para instalar o pacote numpy-financial, que é utilizado nos métodos de Análise de Investimentos, basta executar o comando:
 
