@@ -5,7 +5,7 @@ Repositório de estudos de Engenharia Econômica utilizando Jupyter Notebook
 ## Ferramentas
 
 * Fluxo de Caixa:
-  * [Fluxo DeConversões e Equivalências](fluxo.ipynb)
+  * [Fluxo de Conversões e Equivalências](fluxo.ipynb)
 * Análise de Investimento:
   * [TIR - Taxa Interna de Retorno](tir.ipynb)
   * [VPL - Valor Presente Líquido](vpl.ipynb)
@@ -21,7 +21,7 @@ Somente siga esses passos se for executar locamente, desconsiderar se estiver us
 
 Para instalar o pacote numpy-financial, que é utilizado nos métodos de Análise de Investimentos, basta executar o comando:
 
-    pip install numpy-financial  (ou pip3)
+    pip install numpy-financial
 
 ou, se você estiver usando o Anaconda, basta executar:
 
