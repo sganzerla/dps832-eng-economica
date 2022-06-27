@@ -54,23 +54,34 @@ Métodos para realizar análise de investimentos de três formas diferentes.
   
 #### Exemplo de uso com TIR
 
+    # investimento A
     inv_a = Investimento(
-        taxa=0.0, fluxo_caixa=[-150, 73, 73, 73])
+        fluxo_caixa=[
+            -100,
+            55, 55, 55, 55, 55 - 200,
+            70, 70, 95, 95, 95
+        ])
 
-    inve_b = Investimento(
-        taxa=0.0, fluxo_caixa=[-130, 52, 52, 52])
+    # investimento 2
+    inv_b = Investimento(
+        fluxo_caixa=[
+            -175,
+            58, 58, 65, 65, 65,
+            95, 95, 95, 95, 95
+        ])
 
-    comparar_invest_via_tir(inv_a, inve_b)
+    comparar_invest_via_tir(inv_a, inv_b)
 
 Saída:
 
     Comparação de investimentos considerando TIR.
-    Investimento 1:  21.6
-    Investimento 2:  9.7
-    Melhor investimento, considerando maior valor TIR é:  21.6%
+    Investimento 1:  42.42%
+    Investimento 2:  36.49%
+    Melhor investimento, considerando maior valor TIR é:  42.42%
 
 #### Exemplo de uso com VPL
 
+    # investimento a
     inv_a = Investimento(
         taxa=0.15,
         fluxo_caixa=[
@@ -78,6 +89,7 @@ Saída:
             30, 35, 32, 28, 37
         ])
 
+    # investimento b
     inv_b = Investimento(
         taxa=0.18,
         fluxo_caixa=[
@@ -96,21 +108,23 @@ Saída:
 
 #### Exemplo de uso com VAUE
 
-    inv_a = Investimento(
+    # investimento 1
+    inv_1 = Investimento(
         taxa=0.3,
         fluxo_caixa=[
             -14_000,
             5_000, 5_000, 5_000, 5_000, 5_000, 5_000, 5_000
         ])
 
-    inv_b = Investimento(
+    # investimento 2
+    inv_2 = Investimento(
         taxa=0.3,
         fluxo_caixa=[
             -18_000,
             6_500, 6_500, 6_500, 6_500, 6_500, 6_500, 6_500
         ])
 
-    comparar_invest_via_vaue(inv_a, inv_b)
+    comparar_invest_via_vaue(inv_1, inv_2)
 
 Saída:
 
